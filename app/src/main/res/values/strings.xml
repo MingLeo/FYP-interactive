@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FYP_Interactive</string>
+    <string name="gyroscope">GyroScope</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="welcome_page">Welcome to FYP Interactive :)</string>
+    <string name="camera_opencv">Camera OpenCV</string>
+</resources>
