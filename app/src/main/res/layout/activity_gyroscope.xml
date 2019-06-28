@@ -1,25 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Gyroscope">
 
+    <EditText
+        android:id="@+id/xGyro"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="192dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="xGyro" />
+
     <TextView
-        android:id="@+id/welcomeTextGyro"
-        android:layout_width="163dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="16dp"
-        android:text="Welcome to Gyroscope"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:id="@+id/xGyroUpdate"
+        android:layout_width="91dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="221dp"
+        android:layout_marginTop="197dp"
+        android:text="xGyroUpdate" />
+
+    <EditText
+        android:id="@+id/yGyro"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="303dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="yGyro" />
+
+    <TextView
+        android:id="@+id/yGyroUpdate"
+        android:layout_width="92dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="303dp"
+        android:layout_marginEnd="94dp"
+        android:text="yGyroUpdate" />
+
+    <EditText
+        android:id="@+id/zGyro"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="414dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="zGyro" />
+
+    <TextView
+        android:id="@+id/zGyroUpdate"
+        android:layout_width="92dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/yGyroUpdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="233dp"
+        android:layout_marginTop="422dp"
+        android:text="zGyroUpdate" />
+</RelativeLayout>

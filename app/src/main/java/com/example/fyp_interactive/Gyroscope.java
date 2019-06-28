@@ -6,19 +6,24 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Bundle;
 import android.os.Handler;
-
 
 public class Gyroscope extends AppCompatActivity {
 
     private SensorManager sensorManager;
     private Sensor gyroscopeSensor;
     private SensorEventListener gyroscopeEventListener;
+    private static final String TAG = "Gyroscope";
+
+    TextView xGyro, yGyro, zGyro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +37,22 @@ public class Gyroscope extends AppCompatActivity {
             finish();
         }
 
+        xGyro = (TextView) findViewById(R.id.xGyroUpdate);   //Type cast as a check ensure that it is ""calling"/"updating" to the correct type.
+        yGyro = (TextView) findViewById(R.id.yGyroUpdate);
+        zGyro = (TextView) findViewById(R.id.zGyroUpdate);
+
         gyroscopeEventListener = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
+                Log.d(TAG,"onGyroSensorChanged: X" + sensorEvent.values[0] + "Y" + sensorEvent.values[1] + "Z" + sensorEvent.values[2]);    //Log is like an internal msg print only on Android Studio IDE, is sorta like a Git Tag "an internal debug Msg" for developers to see, is hidden away from App UI users.
+                xGyro.setText("xGyroUpdate:" + sensorEvent.values[0]);
+                yGyro.setText("yGyroUpdate:" + sensorEvent.values[1]);
+                zGyro.setText("zGyroUpdate:" + sensorEvent.values[2]);   //Relax, even if is the same class sensorEvent use for Accelro/Gyro, is differentiated by the ListenerType that you use!!
+            }
+
+                /*
                 if (sensorEvent.values[2]>0.2f){    //.values[0] x-axis , values[1] y-axis , values[0] z-axis
-                    /*
+
                     try {
                         final Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
@@ -49,24 +65,9 @@ public class Gyroscope extends AppCompatActivity {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    */
                 }
-                else if (sensorEvent.values[2]<0.2f){
-                    getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
-                }
-                else if (sensorEvent.values[1]>0.2f){
-                    getWindow().getDecorView().setBackgroundColor(Color.GREEN);
-                }
-                else if (sensorEvent.values[1]<0.2f){
-                    getWindow().getDecorView().setBackgroundColor(Color.MAGENTA);
-                }
-                else if (sensorEvent.values[0]>0.2f){
-                    getWindow().getDecorView().setBackgroundColor(Color.GRAY);
-                }
-                else if (sensorEvent.values[0]<0.2f){
-                    getWindow().getDecorView().setBackgroundColor(Color.WHITE);
-                }
-            }
+
+                */
 
             @Override
             public void onAccuracyChanged(Sensor sensor, int accuracy) {
@@ -86,4 +87,7 @@ public class Gyroscope extends AppCompatActivity {
         super.onPause();
         sensorManager.unregisterListener(gyroscopeEventListener);
     }
+
+
+
 }

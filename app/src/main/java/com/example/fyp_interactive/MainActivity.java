@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button gyroscope, accelerometer, openCV;
+    Button gyroscope, accelerometer, camera;
     TextView welcome;
 
     @Override
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         gyroscope = (Button) findViewById(R.id.gyroscopeButton);
         accelerometer = (Button) findViewById(R.id.accelerometerButton);
-        openCV = (Button) findViewById(R.id.openCV_Button);
+        camera = (Button) findViewById(R.id.cameraButton);
 
 
         gyroscope.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        camera.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent cameraIntent = new Intent(MainActivity.this, Camera.class);
+                startActivity(cameraIntent);
+            }
+        });
 
         //openCV.setOnClickListener(new View.OnClickListener() {});
 
