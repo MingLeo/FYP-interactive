@@ -1,23 +1,16 @@
 package com.example.fyp_interactive;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.util.Log;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Accelerometer extends AppCompatActivity implements SensorEventListener{
 
@@ -51,9 +44,9 @@ public class Accelerometer extends AppCompatActivity implements SensorEventListe
             finish();
         }
 
-        xValue = (TextView) findViewById(R.id.xValueUpdate);   //Type cast as a check ensure that it is ""calling"/"updating" to the correct type.
-        yValue = (TextView) findViewById(R.id.yValueUpdate);
-        zValue = (TextView) findViewById(R.id.zValueUpdate);
+        xValue = (TextView) findViewById(R.id.xAcclUpdate);   //Type cast as a check ensure that it is ""calling"/"updating" to the correct type.
+        yValue = (TextView) findViewById(R.id.yAcclUpdate);
+        zValue = (TextView) findViewById(R.id.zAcclUpdate);
 
         Log.d(TAG, "onCreate: Initializing Sensor Services");
         sensorManager.registerListener(Accelerometer.this, accelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL);  // Typecasting again, notice how we alrdy create an object earlier, now is just to sorta "check" to play safe, ensure pass in to the correct Object Type.
@@ -73,11 +66,6 @@ public class Accelerometer extends AppCompatActivity implements SensorEventListe
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
-
-
-
-
-
 
         /*
         accelerometerEventListener = new SensorEventListener() {

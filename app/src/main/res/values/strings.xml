@@ -8,9 +8,10 @@
     <string name="video_button">Video Record Button</string>
     <string name="camera_button">Camera Capture Button</string>
 
-    <string name="xValueUpdate">xValueUpdate</string>
-    <string name="yValueUpdate">yValueUpdate</string>
-    <string name="zValueUpdate">zValueUpdate</string>
-
+    <!--
+        <string name="xValueUpdate">xValueUpdate</string>
+        <string name="yValueUpdate">yValueUpdate</string>
+        <string name="zValueUpdate">zValueUpdate</string>
+    -->
 
 </resources>

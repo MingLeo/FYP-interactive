@@ -1,22 +1,17 @@
 package com.example.fyp_interactive;
 
-import android.content.Intent;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.nfc.Tag;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Bundle;
-import android.os.Handler;
 
-public class Gyroscope extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Gyroscope extends AppCompatActivity{
 
     private SensorManager sensorManager;
     private Sensor gyroscopeSensor;

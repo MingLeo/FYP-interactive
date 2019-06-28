@@ -7,7 +7,7 @@
     tools:context=".Accelerometer">
 
     <EditText
-        android:id="@+id/xValueHeader"
+        android:id="@+id/xAccl"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -16,21 +16,21 @@
         android:layout_marginTop="161dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="xValue:" />
+        android:text="xAccl:" />
 
     <TextView
-        android:id="@+id/xValueUpdate"
+        android:id="@+id/xAcclUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="224dp"
         android:layout_marginTop="177dp"
-        android:text="xUpdate" />
+        android:text="xAcclUpdate" />
 
 
     <EditText
-        android:id="@+id/yValueHeader"
+        android:id="@+id/yAccl"
         android:layout_width="69dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -39,20 +39,20 @@
         android:layout_marginTop="244dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="yValue" />
+        android:text="yAccl" />
 
     <TextView
-        android:id="@+id/yValueUpdate"
+        android:id="@+id/yAcclUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="226dp"
         android:layout_marginTop="254dp"
-        android:text="yUpdate" />
+        android:text="yAcclUpdate" />
 
     <EditText
-        android:id="@+id/zValueHeader"
+        android:id="@+id/zAccl"
         android:layout_width="71dp"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
@@ -61,15 +61,15 @@
         android:layout_marginTop="360dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="zValue" />
+        android:text="zAccl" />
 
     <TextView
-        android:id="@+id/zValueUpdate"
+        android:id="@+id/zAcclUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="229dp"
         android:layout_marginTop="358dp"
-        android:text="zUpdate" />
+        android:text="zAcclUpdate" />
 </RelativeLayout>
