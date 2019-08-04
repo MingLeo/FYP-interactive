@@ -12,6 +12,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
+    <!--
+
     <ImageButton
         android:id="@+id/cameraImageButton"
         android:contentDescription="@string/video_button"
@@ -33,5 +35,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="105dp"
         app:srcCompat="@mipmap/btn_video_online" />
+
+    -->
 
 </RelativeLayout>
